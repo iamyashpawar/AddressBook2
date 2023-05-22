@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class AdressBook {
 
     Contact contact = new Contact();
+    Scanner sc = new Scanner(System.in);
 
     public void addContact()
     {
@@ -41,6 +42,19 @@ public class AdressBook {
         contact.setPhoneNumber(phoneNumber);
         contact.setEmailAdress(emailAddress);
 
+    }
+
+    public void editContact(){
+
+        System.out.println("Search Contact ");
+        String editContact = sc.next();
+
+        if(editContact.equalsIgnoreCase(contact.getFirstName())){
+            System.out.println("Contact Found");
+            System.out.println("Enter New First Name: ");
+            String firstName = sc.next();
+            contact.setFirstName(firstName);
+        }
     }
 //    Contact contact2 = new Contact("Prashant", "Patil", "35,Vinod Nagar near walwadi shivar dhule", "Pune", "Maharashtra", "424002", "9637549995", "imyashpawar@gmail.com");
 //    Contact contact3 = new Contact("Harshal", "Thakur", "54,Patbandhare Colony walwadi shivar", "Nashik", "Maharashtra", "424002", "9637549995", "imyashpawar@gmail.com");
