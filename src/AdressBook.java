@@ -1,9 +1,14 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AdressBook {
 
     Contact contact = new Contact();
     Scanner sc = new Scanner(System.in);
+
+    ArrayList<Contact> contactList = new ArrayList<>();
+
+    
 
     public void addContact()
     {
@@ -42,6 +47,7 @@ public class AdressBook {
         contact.setPhoneNumber(phoneNumber);
         contact.setEmailAdress(emailAddress);
 
+        contactList.add(contact);
     }
 
     public void editContact(){
