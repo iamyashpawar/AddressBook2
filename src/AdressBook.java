@@ -54,8 +54,27 @@ public class AdressBook {
             System.out.println("Enter New First Name: ");
             String firstName = sc.next();
             contact.setFirstName(firstName);
+        }else {
+            System.out.println("Contact Not found");
         }
     }
+    public void deleteContact(){
+
+        System.out.println("Search Contact for delete ");
+        String deleteContact = sc.next();
+        if(deleteContact.equalsIgnoreCase(contact.getFirstName())){
+
+            contact = null;
+
+        }else {
+            System.out.println("Contact not found ");
+        }
+
+    }
+
+
+
+
 //    Contact contact2 = new Contact("Prashant", "Patil", "35,Vinod Nagar near walwadi shivar dhule", "Pune", "Maharashtra", "424002", "9637549995", "imyashpawar@gmail.com");
 //    Contact contact3 = new Contact("Harshal", "Thakur", "54,Patbandhare Colony walwadi shivar", "Nashik", "Maharashtra", "424002", "9637549995", "imyashpawar@gmail.com");
 //    Contact contact4 = new Contact("Piyush", "Bhoye", "29,Maulipada near cinemaa hall", "Nandurbar", "Maharashtra", "424002", "9637549995", "imyashpawar@gmail.com");
